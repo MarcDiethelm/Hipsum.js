@@ -1,0 +1,40 @@
+{
+	"name": "hipsum",
+	"version": "0.1.0",
+	"description": "A filler text generator for Handlebars templates.",
+	"main": "index.js",
+	"directories": {
+		"test": "test"
+	},
+	"scripts": {
+		"test": "./node_modules/.bin/mocha"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/MarcDiethelm/hipsum.git"
+	},
+	"keywords": [
+		"filler",
+		"text",
+		"placeholder",
+		"text",
+		"dummy",
+		"text",
+		"lorem",
+		"ipsum",
+		"generator",
+		"handlebars",
+		"helper"
+	],
+	"author": "Marc Diethelm",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/MarcDiethelm/hipsum/issues"
+	},
+	"dependencies": {
+		"handlebars": "~1.0.12"
+	},
+	"devDependencies": {
+		"mocha": "~1.13.0"
+	}
+}
