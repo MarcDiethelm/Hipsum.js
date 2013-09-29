@@ -35,6 +35,9 @@
 		"handlebars": "~1.0.12"
 	},
 	"devDependencies": {
-		"mocha": "~1.13.0"
+		"mocha": "~1.13.0",
+		"grunt": "~0.4.1",
+		"grunt-browserify": "~1.2.5",
+		"deglobalify": "0.0.1"
 	}
 }
