@@ -11,7 +11,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/MarcDiethelm/hipsum.git"
+		"url": "git://github.com/MarcDiethelm/Hipsum.js.git"
 	},
 	"keywords": [
 		"filler",
@@ -29,7 +29,7 @@
 	"author": "Marc Diethelm",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/MarcDiethelm/hipsum/issues"
+		"url": "https://github.com/MarcDiethelm/Hipsum.js/issues"
 	},
 	"dependencies": {
 		"handlebars": "~1.0.12"
