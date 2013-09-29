@@ -49,21 +49,21 @@ describe('Hipsum', function() {
 	describe('Should render correctly (functional test)', function() {
 	
 		it('Should render the default lorem ipsum', function() {
-			var source   = fs.readFileSync('test/fixtures/default.hbs', {encoding: 'utf-8'});
+			var source   = fs.readFileSync('test/fixtures/default.hbs', 'utf-8');
 			var expected = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
 			var actual = hbs.compile(source)({});
 			assert.equal(expected, actual);
 		});
 	
 		it('Should render the specified word count when count (8) < word list', function() {
-			var source   = fs.readFileSync('test/fixtures/default-8-words.hbs', {encoding: 'utf-8'});
+			var source   = fs.readFileSync('test/fixtures/default-8-words.hbs', 'utf-8');
 			var expected = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,';
 			var actual = hbs.compile(source)({});
 			assert.equal(expected, actual);
 		});
 	
 		it('Should render the specified word count when count (80) > word list', function() {
-			var source   = fs.readFileSync('test/fixtures/default-80-words.hbs', {encoding: 'utf-8'});
+			var source   = fs.readFileSync('test/fixtures/default-80-words.hbs', 'utf-8');
 			var expected = 80;
 			var actual = hbs.compile(source)({}).split(' ').length;
 			assert.equal(expected, actual);
