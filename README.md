@@ -1,4 +1,4 @@
-handlebars-ipsum
-================
+Hipsum.js
+=========
 
-A filler text helper for Handlebars templates
+A filler text generator for Handlebars templates.
