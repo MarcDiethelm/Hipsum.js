@@ -1,8 +1,8 @@
 {
 	"name": "hipsum",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "A filler text generator for Handlebars templates.",
-	"main": "index.js",
+	"main": "./lib/hipsum.js",
 	"directories": {
 		"test": "test"
 	},
@@ -24,7 +24,8 @@
 		"ipsum",
 		"generator",
 		"handlebars",
-		"helper"
+		"helper",
+		"hamlet"
 	],
 	"author": "Marc Diethelm",
 	"license": "MIT",
