@@ -8,7 +8,7 @@ describe('Hipsum', function() {
 	var lib;
 	
 	beforeEach(function() {
-		lib = require('../lib')(hbs);
+		lib = require('../lib/hipsum.js')(hbs);
 	});
 	
 	
@@ -32,9 +32,16 @@ describe('Hipsum', function() {
 			assert.equal(expected, actual);
 		});
 	
+		it('Should always end with a full stop (count (8) < word list)', function() {
+			var expected = '.';
+			var result = lib(8).string
+			var actual = result[result.length-1];
+			assert.equal(expected, actual);
+		});
+
 		it('Should render the specified word count when count (8) < word list', function() {
-			var expected = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,';
-			var actual = lib(8);
+			var expected = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.';
+			var actual = lib(8).string;
 			assert.equal(expected, actual);
 		});
 	
@@ -57,7 +64,7 @@ describe('Hipsum', function() {
 	
 		it('Should render the specified word count when count (8) < word list', function() {
 			var source   = fs.readFileSync('test/fixtures/default-8-words.hbs', 'utf-8');
-			var expected = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,';
+			var expected = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.';
 			var actual = hbs.compile(source)({});
 			assert.equal(expected, actual);
 		});
@@ -68,6 +75,13 @@ describe('Hipsum', function() {
 			var actual = hbs.compile(source)({}).split(' ').length;
 			assert.equal(expected, actual);
 		});
+
+		it('Should render the alternate text from Hamlet', function() {
+			var source   = fs.readFileSync('test/fixtures/hamlet-10-words.hbs', 'utf-8');
+			var expected = "To be, or not to be, that is the question.";
+			var actual = hbs.compile(source)({});
+			assert.equal(expected, actual);
+		});
 	});
-	
+
 });
